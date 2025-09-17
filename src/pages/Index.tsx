@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { UserCheck, Users, Clock, FileText, Zap, Shield } from "lucide-react";
@@ -38,13 +39,17 @@ const Index = () => {
             Gagnez du temps, candidats et recruteurs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="px-8">
-              <UserCheck className="mr-2 h-4 w-4" />
-              Je suis candidat
+            <Button size="lg" className="px-8" asChild>
+              <Link to="/candidat">
+                <UserCheck className="mr-2 h-4 w-4" />
+                Je suis candidat
+              </Link>
             </Button>
-            <Button size="lg" variant="outline" className="px-8">
-              <Users className="mr-2 h-4 w-4" />
-              Je suis recruteur
+            <Button size="lg" variant="outline" className="px-8" asChild>
+              <Link to="/recruteur">
+                <Users className="mr-2 h-4 w-4" />
+                Je suis recruteur
+              </Link>
             </Button>
           </div>
         </div>
@@ -204,11 +209,15 @@ const Index = () => {
             Rejoignez les professionnels IT qui ont déjà simplifié leur processus de recrutement
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="px-8">
-              Essai gratuit - Candidat
+            <Button size="lg" className="px-8" asChild>
+              <Link to="/candidat">
+                Essai gratuit - Candidat
+              </Link>
             </Button>
-            <Button size="lg" variant="outline" className="px-8">
-              Démo recruteur
+            <Button size="lg" variant="outline" className="px-8" asChild>
+              <Link to="/recruteur">
+                Démo recruteur
+              </Link>
             </Button>
           </div>
         </div>
